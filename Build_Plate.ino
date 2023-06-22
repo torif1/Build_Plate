@@ -1,10 +1,12 @@
 #include "Thermistor.h"
 
 // the value of the 'other' resistor
-#define SERIESRESISTOR 10000    
- 
+#define SERIESRESISTOR 10000
+
 // What pin to connect the sensor to
-#define THERMISTORPIN A0 
+#define THERMISTORPIN A0
+
+#define DESIREDTEMPERACHURE 27
 
 Thermistor thermistor(THERMISTORPIN, SERIESRESISTOR);
 
@@ -14,9 +16,6 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-Serial.print("Thermistor reisitance:");
-int reading=thermistor.retriveresistance();
-Serial.println(reading);
-delay(1000);
+
+  delay(1000);
 }
