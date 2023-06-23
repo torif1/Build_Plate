@@ -1,24 +1,25 @@
 #include "Hbridge.h"
 
-Hbridge::Hbridge(byte pmw1, byte pmw2) {
-  this->pmw1 = pmw1;
-  this->pmw2 = pmw2;
+Hbridge::Hbridge(byte pwm1, byte pwm2) {
+  this->pwm1 = pwm1;
+  this->pwm2 = pwm2;
   init();
 }
 
 void Hbridge::init() {
-  pinMode(pmw1, OUTPUT);
-  pinMode(pmw2, OUTPUT);
+  pinMode(pwm1, OUTPUT);
+  pinMode(pwm2, OUTPUT);
 }
 
-void Hbridge::hotsurface() {
+void Hbridge::hotsurface() { //forward
+  int a=1;
+
+}
+
+void Hbridge::coldsurface() { //backward
   int a=1;
 }
 
-void Hbridge::coldsurface() {
-  int a=1;
-}
-
-void Hbridge::off() {
+void Hbridge::off() { //stop or standby mode
   int a=1;
 }

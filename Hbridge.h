@@ -6,11 +6,11 @@
 class Hbridge {
 
 private:
-  byte pmw1;
-  byte pmw2;
+  byte pwm1;
+  byte pwm2;
 
 public:
-  Hbridge(byte pmw1, byte pmw2);
+  Hbridge(byte pwm1, byte pwm2);
   void init();
   void hotsurface();
   void coldsurface();
