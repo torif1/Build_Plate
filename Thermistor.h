@@ -18,6 +18,5 @@ public:
   Thermistor(byte pin, byte resistance);
   void init();
   retriveresistance();
-  retrivetemperachure();
 };
 #endif
