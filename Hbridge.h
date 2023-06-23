@@ -6,8 +6,8 @@
 class Hbridge {
 
 private:
-  byte pwm1;
-  byte pwm2;
+  byte pwm1;  //IN1
+  byte pwm2;  //IN2
 
 public:
   Hbridge(byte pwm1, byte pwm2);
