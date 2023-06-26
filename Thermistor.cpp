@@ -8,9 +8,10 @@ Thermistor::Thermistor(byte pin, byte resistor) {
 }
 
 void Thermistor::init() {
-  pinMode(pin, OUTPUT);
+  pinMode(pin, INPUT);
 }
 
+//determine resistance measured by thermistor
 Thermistor::retriveresistance() {
 
   float reading = analogRead(pin);
