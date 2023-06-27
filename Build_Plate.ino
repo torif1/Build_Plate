@@ -19,20 +19,4 @@ void setup() {
 void loop() {
   delay(1000);  //delay in loop
 
-if (goal_resistance<lab_resistance){ //goal temp higher than lab temp
-
-  if (lab_resistance<goal_resistance) {
-    hbridge.coldsurface();
-  } else {
-    hbridge.off();
-  }
-} else if (goal_resistance>lab_resistance){
-  if (lab_resistance>goal_resistance){
-  hbridge.hotsurface();
-  } else {
-    hbridge.off();
-  }
-} else {
-  hbridge.off();
-}
 }
