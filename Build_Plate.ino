@@ -17,8 +17,6 @@ void setup() {
   
 }
 void loop() {
-  Serial.print(thermistor.retriveresistance());
-  hbridge.coldsurface();
   delay(1000);  //delay in loop
 
 if (goal_resistance<lab_resistance){ //goal temp higher than lab temp
