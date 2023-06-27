@@ -1,27 +1,26 @@
 #include "Thermistor.h"
 
-//establish variables for use
 Thermistor::Thermistor(byte pin, byte resistor) {
   this->resistor = resistor;
   this->pin = pin;
   init();
 }
 
-//set up thermistor pins
+// set up thermistor pins
 void Thermistor::init() {
   pinMode(pin, INPUT);
 }
 
-//determine resistance measured by thermistor
+// determine resistance measured by thermistor
 Thermistor::retriveresistance() {
 
-  float reading = analogRead(pin);  //find analogue voltage
-  reading = (1023 / reading) - 1;   //convert to resistance
+  float reading = analogRead(pin);  // find analogue voltage
+  reading = (1023 / reading) - 1;   // convert to resistance
   reading = resistor / reading;     // converto to resistance
-  return reading;                   //return results
+  return reading;                   // return results
 }
 
-//determine baseline enviornment resistance
+// determine baseline enviornment resistance
 Thermistor::enviornmentresistance() {
 
   // take 6 samples in a row, with a slight delay
@@ -41,5 +40,5 @@ Thermistor::enviornmentresistance() {
   average = 1023 / average - 1;
   average = resistor / average;
 
-  return average;  //return results
+  return average;  // return results
 }

@@ -1,4 +1,4 @@
-//prevents class from being defined multiple times
+// prevents class from being defined multiple times
 #ifndef MY_HBRIDGE_H
 #define MY_HBRIDGE_H
 
@@ -8,8 +8,8 @@
 class Hbridge {
 
 private:
-  byte pwm1;  //IN1
-  byte pwm2;  //IN2
+  byte pwm1;  // IN1
+  byte pwm2;  // IN2
 
 public:
   Hbridge(byte pwm1, byte pwm2);

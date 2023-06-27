@@ -1,4 +1,4 @@
-//prevents class from being defined multiple times
+// prevents class from being defined multiple times
 #ifndef MY_THERMISTOR_H
 #define MY_THERMISTOR_H
 
@@ -8,11 +8,11 @@
 class Thermistor {
 
 private:
-  byte pin;        //thermistor analogue pin number
-  byte resistor;   //resistor to compare resistance
-  float average;   //average initial plate resistance reading
-  int i;           //dummy variable
-  int samples[6];  //array of analogue readings
+  byte pin;        // thermistor analogue pin number
+  byte resistor;   // resistor to compare resistance
+  float average;   // average initial plate resistance reading
+  int i;           // dummy variable
+  int samples[6];  // array of analogue readings
 
 public:
   Thermistor(byte pin, byte resistance);
