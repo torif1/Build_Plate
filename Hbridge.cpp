@@ -12,13 +12,13 @@ void Hbridge::init() {
 }
 
 void Hbridge::hotsurface() {  //forward
-  analogWrite(pwm1, 255);
-  analogWrite(pwm2, 0);
+  analogWrite(pwm1, 0);
+  analogWrite(pwm2, 255);
 }
 
 void Hbridge::coldsurface() {  //backward
-  analogWrite(pwm1, 0);
-  analogWrite(pwm2, 255);
+  analogWrite(pwm1, 255);
+  analogWrite(pwm2, 0);
 }
 
 void Hbridge::off() {  //stop or standby mode
