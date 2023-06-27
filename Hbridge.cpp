@@ -1,27 +1,32 @@
 #include "Hbridge.h"
 
+//establish variables for use
 Hbridge::Hbridge(byte pwm1, byte pwm2) {
   this->pwm1 = pwm1;
   this->pwm2 = pwm2;
   init();
 }
 
+//Set up Hbridge pinns
 void Hbridge::init() {
   pinMode(pwm1, OUTPUT);
   pinMode(pwm2, OUTPUT);
 }
 
-void Hbridge::hotsurface() {  //forward
-  analogWrite(pwm1, 0);
-  analogWrite(pwm2, 255);
+//heat build surface
+void Hbridge::hotsurface() {
+  analogWrite(pwm1, 0);    //Low
+  analogWrite(pwm2, 255);  //High
 }
 
-void Hbridge::coldsurface() {  //backward
-  analogWrite(pwm1, 255);
-  analogWrite(pwm2, 0);
+//cool build surface
+void Hbridge::coldsurface() {
+  analogWrite(pwm1, 255);  //High
+  analogWrite(pwm2, 0);    //Low
 }
 
-void Hbridge::off() {  //stop or standby mode
-  analogWrite(pwm1, 0);
-  analogWrite(pwm2, 0);
+//stop or standby mode
+void Hbridge::off() {
+  analogWrite(pwm1, 0);  //Low
+  analogWrite(pwm2, 0);  //Low
 }

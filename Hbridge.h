@@ -1,8 +1,10 @@
+//prevents class from being defined multiple times
 #ifndef MY_HBRIDGE_H
 #define MY_HBRIDGE_H
 
 #include <Arduino.h>
 
+// defines Hbridge class
 class Hbridge {
 
 private:
