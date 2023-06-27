@@ -8,12 +8,17 @@
 class Thermistor {
 
 private:
-  byte pin;
-  byte resistor;
+  byte pin;        //thermistor analogue pin number
+  byte resistor;   //resistor to compare resistance
+  float average;   //average initial plate resistance reading
+  int i;           //dummy variable
+  int samples[6];  //array of analogue readings
 
 public:
   Thermistor(byte pin, byte resistance);
   void init();
+
   retriveresistance();
+  enviornmentresistance();
 };
 #endif
