@@ -8,12 +8,5 @@ void setup() {
   Serial.begin(9600);  // Begins Serial monitor for 9600 baud
 }
 void loop() {
-  // loop to test the functionality of the circut
-  Serial.print(thermistor.retriveresistance());
-  hbridge.coldsurface();
   delay(1000);  //delay in loop
-  hbridge.off();
-  delay(1000);
-  hbridge.hotsurface();
-  delay(1000);
 }
