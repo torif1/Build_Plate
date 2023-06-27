@@ -39,6 +39,6 @@ Thermistor::enviornmentresistance() {
   // convert the value to resistance
   average = 1023 / average - 1;
   average = resistor / average;
-  
+
   return average;
 }
