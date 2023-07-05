@@ -22,14 +22,7 @@ void loop() {
   Serial.print(thermistor_resistance);
   Serial.print("\n");
 
-  // control hbridge based on
-  if (goal_resistance > global_resistance && goal_resistance > thermistor_resistance) {         // goal temp cooler than enviornment and current plate temp
-    hbridge.coldsurface();                                                                      // cool build plate
-  } else if (goal_resistance < global_resistance && goal_resistance < thermistor_resistance) {  // goal temp hotter than enviornment and current plate temp
-    hbridge.hotsurface();                                                                       // heat build plate
-  } else {
-    hbridge.off();  // cut power to Peltier modules
-  }
+
 
   delay(1000);  // pause in function
 }
