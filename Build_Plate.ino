@@ -7,7 +7,7 @@ float global_resistance;      // room temperachure
 float thermistor_resistance;  // resistance read by thermistor
 
 Thermistor thermistor(A0, 10000);  // created a thermistor for analogue pin A0, and resistor with resistance 10,000 ohm.
-Hbridge hbridge(3, 5);             // created a hbridge for pwm pins 3 and 5
+Hbridge hbridge(3, 5);             // created a hbridge for pwm pins 3 and 5 (will need to reverse this value)
 
 void setup() {
   Serial.begin(9600);                                      // Begins serial monitor for 9600 baud
