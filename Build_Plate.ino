@@ -3,7 +3,7 @@
 
 // #define goal_resistance 17  // goal temperachure
 
-int goal_resistance =16;  //goal temp
+int goal_resistance =15;  //goal temp
 
 float global_resistance;      // room temperachure
 float thermistor_resistance;  // resistance read by thermistor
@@ -24,7 +24,9 @@ void loop() {
   //Serial.print(thermistor_resistance);
  // Serial.print("\n");
 
-  // control hbridge based on
+  // control loop
+  //I believe that it is workng correctly, I would like to add something that
+  //turns the coolers on and off a lil
   if (goal_resistance > global_resistance && goal_resistance > thermistor_resistance) {         // goal temp cooler than enviornment and current plate temp
     hbridge.coldsurface();                                                                      // cool build plate
     Serial.println("Top Cooling");
