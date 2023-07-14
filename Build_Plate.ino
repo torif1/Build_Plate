@@ -22,7 +22,7 @@ void setup() {
 void loop() {
 
   thermistor_resistance = thermistor.retriveresistance();  // find thermistor resistance at given time
-  //Input=thermistor_resistance;  // set input to be equal to thermistor resistance
+  mypid.
 
 
   // record temperachure in serial monitor

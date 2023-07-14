@@ -29,3 +29,7 @@ void Hbridge::off() {
   analogWrite(pwm1, 0);  // Low
   analogWrite(pwm2, 0);  // Low
 }
+
+//I will need to make new functions that can have dinamic inputs
+
+void Hbridge::
