@@ -41,6 +41,8 @@ void loop() {
 
   }
 
+  delay(3000);
+  hbridge.off();
 
   delay(1000);  // pause in function
 
